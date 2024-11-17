@@ -7,7 +7,10 @@
    docker run -d -p 8080:8080 rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT
    docker run -d -p 8080:8080 rbalekundri/springboot-k8s-demo:1.1
 4. docker ps -a
-5. docker stop <container-id>
-6. docker rm <container-id>
-7. docker rmi rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT
+5. docker logs <container-id>
+   docker logs -f <container-id>
+6. docker stop <container-id>
+7. docker rm <container-id>
+8. docker rmi rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT
+9. docker push rbalekundri/springboot-k8s-demo:1.1  (docker push rbalekundri/springboot-k8s-demo:tagname)
 
