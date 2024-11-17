@@ -1,8 +1,12 @@
 spring:
   application:
-    name: aks-demo
+    name: springboot-k8s-demo
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
     mode: HTML
     cache: true
+server:
+  error:
+    whitelabel:
+      enabled: false

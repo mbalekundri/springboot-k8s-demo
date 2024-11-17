@@ -7,9 +7,15 @@
 <body>
     <h1>Welcome to Spring Boot Thymeleaf Example with Azure Kubernetes Service!</h1>
     <p>Page accessed <span th:text="${count}"></span> times.</p>
-    <p>Current time: <span th:text="${time}"></span></p>
-    <ul>
-        <li th:each="remoteCall : ${remoteCalls}" th:text="${remoteCall}"></li>
-    </ul>
+    <table border="1">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <ul>
+                    <li th:each="remoteCall : ${remoteCalls}" th:text="${remoteCall}"></li>
+                </ul>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

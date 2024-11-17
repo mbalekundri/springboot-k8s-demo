@@ -1,5 +1,6 @@
-package com.azure.aks.demo.controller;
+package com.springboot.k8s.demo.controller;
 
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class WelcomeController {
+public class WelcomeController implements ErrorController {
 
     private static Integer count = 0;
     private static List<String> remoteCalls = new ArrayList<>();
@@ -24,8 +25,7 @@ public class WelcomeController {
         ModelAndView modelAndView = new ModelAndView("home");
         modelAndView.addObject("count", count);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        modelAndView.addObject("time", LocalDateTime.now().format(formatter));
-        String remoteCall = request.getRemoteAddr()+":"+request.getRemoteHost()+":"+request.getParameter("user");
+        String remoteCall = "time: "+LocalDateTime.now().format(formatter)+", Remote address: "+request.getRemoteAddr()+", Remote host: "+request.getRemoteHost()+", User: "+request.getParameter("user");
         remoteCalls.add(remoteCall);
         modelAndView.addObject("remoteCalls", remoteCalls);
         return modelAndView;
