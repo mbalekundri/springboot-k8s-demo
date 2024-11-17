@@ -1,0 +1,15 @@
+<!-- Add thymeleaf welcome home.html code -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf Example</title>
+</head>
+<body>
+    <h1>Welcome to Spring Boot Thymeleaf Example with Azure Kubernetes Service!</h1>
+    <p>Page accessed <span th:text="${count}"></span> times.</p>
+    <p>Current time: <span th:text="${time}"></span></p>
+    <ul>
+        <li th:each="remoteCall : ${remoteCalls}" th:text="${remoteCall}"></li>
+    </ul>
+</body>
+</html>

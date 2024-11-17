@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: aks-demo
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    cache: true
