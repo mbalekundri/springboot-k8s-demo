@@ -7,8 +7,9 @@
 <body>
     <h1>Welcome to Spring Boot Thymeleaf Example with Azure Kubernetes Service!</h1>
     <p>Page accessed <span th:text="${count}"></span> times.</p>
+    <p>Env variable <span th:text="${appEnv}"></span></p>
     <table border="1">
-        <thead></thead>
+        <thead>Remote Call Records</thead>
         <tbody>
             <tr>
                 <ul>

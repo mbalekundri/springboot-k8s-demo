@@ -10,3 +10,4 @@ server:
   error:
     whitelabel:
       enabled: false
+APP_ENV: dev

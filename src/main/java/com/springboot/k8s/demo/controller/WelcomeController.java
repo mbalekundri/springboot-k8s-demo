@@ -1,5 +1,6 @@
 package com.springboot.k8s.demo.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,10 @@ import java.util.List;
 public class WelcomeController implements ErrorController {
 
     private static Integer count = 0;
+
+    @Value("${APP_ENV}")
+    private String appEnv;
+
     private static List<String> remoteCalls = new ArrayList<>();
 
     @GetMapping("/")
@@ -24,6 +29,7 @@ public class WelcomeController implements ErrorController {
         count ++;
         ModelAndView modelAndView = new ModelAndView("home");
         modelAndView.addObject("count", count);
+        modelAndView.addObject("appEnv", appEnv);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String remoteCall = "time: "+LocalDateTime.now().format(formatter)+", Remote address: "+request.getRemoteAddr()+", Remote host: "+request.getRemoteHost()+", User: "+request.getParameter("user");
         remoteCalls.add(remoteCall);
