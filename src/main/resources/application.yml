@@ -10,4 +10,6 @@ server:
   error:
     whitelabel:
       enabled: false
-APP_ENV: dev
+#APP_ENV: dev
+# Pass from envt
+APP_ENV: ${APP_ENV}

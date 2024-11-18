@@ -1,4 +1,4 @@
-# A Docker commands
+# A) Docker commands
 # Create an account in https://hub.docker.com/
 1. docker version  (If not working then login to docker hub by docker login)
 2. docker build -t rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT .
@@ -13,4 +13,13 @@
 7. docker rm <container-id>
 8. docker rmi rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT
 9. docker push rbalekundri/springboot-k8s-demo:1.1  (docker push rbalekundri/springboot-k8s-demo:tagname)
+10. docker run -d -e APP_ENV=prod -p 8080:8080 rbalekundri/springboot-k8s-demo:1.4
+    docker push rbalekundri/springboot-k8s-demo:1.4
+
+# B) K8s commands
+1. kubectl version
+2. kubectl apply -f k8s-manifest.yml
+3. kubectl get deployments (takes time)
+4. kubectl get pods  (takes time)
+5. kubectl get svc
 
