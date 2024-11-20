@@ -8,14 +8,39 @@
     <h1>Welcome to Spring Boot Thymeleaf Example with Azure Kubernetes Service!</h1>
     <p>Page accessed <span th:text="${count}"></span> times.</p>
     <p>Env variable <span th:text="${appEnv}"></span></p>
+    <form th:action="@{/vote}" method="post">
+        <label for="voter">Voter name:</label>
+        <select id="voter" name="voter" required>
+            <option th:each="name : ${voterNames}" th:value="${name}" th:text="${name}"></option>
+        </select>
+        <label for="voteFor">Vote:</label>
+        <select id="voteFor" name="voteFor" required>
+            <option th:each="voteFor : ${candidates}" th:value="${voteFor}" th:text="${voteFor}"></option>
+        </select>
+        <button type="submit">Vote</button>
+    </form>
+    <h2>Voting Count</h2>
     <table border="1">
-        <thead>Remote Call Records</thead>
+        <thead>
+        <tr>
+            <th>Voter</th>
+            <th>Votes</th>
+        </tr>
+        </thead>
         <tbody>
-            <tr>
-                <ul>
-                    <li th:each="remoteCall : ${remoteCalls}" th:text="${remoteCall}"></li>
-                </ul>
-            </tr>
+        <tr th:each="entry : ${votes}">
+            <td th:text="${entry.key}"></td>
+            <td th:text="${entry.value}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <h2>Remote Call Records</h2>
+    <table border="1">
+        <thead></thead>
+        <tbody>
+        <tr th:each="remoteCall : ${remoteCalls}">
+            <td th:text="${remoteCall}"></td>
+        </tr>
         </tbody>
     </table>
 </body>

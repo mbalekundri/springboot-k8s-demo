@@ -1,5 +1,5 @@
 # A) Docker commands
-# Create an account in https://hub.docker.com/
+# Create an account in https://hub.docker.com/ & docker login
 1. docker version  (If not working then login to docker hub by docker login)
 2. docker build -t rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT .
    docker build -t rbalekundri/springboot-k8s-demo:1.1 .

@@ -22,7 +22,7 @@ spec:
           value: "qa"
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: springboot-k8s-service
 spec:
