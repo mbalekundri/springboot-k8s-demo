@@ -5,25 +5,36 @@
     <title>Spring Boot Thymeleaf Example</title>
 </head>
 <body>
-    <h1>Welcome to Spring Boot Thymeleaf Example with Azure Kubernetes Service!</h1>
-    <p>Page accessed <span th:text="${count}"></span> times.</p>
+    <h2>Welcome to Spring Boot Thymeleaf Example with Azure Kubernetes Service!</h2>
+    <h3>Welcome to the Election Voting Online App</h3>
+    <div th:if="${errorMessage}" style="color: red;">
+        <p th:text="${errorMessage}"></p>
+    </div>
+    <div>
+        <p>Total voting count: <span th:text="${count}"></span> times.</p>
+        <p>Session valid: <span th:text="${sessionValid}"></span></p>
+        <form th:action="@{/startVoting}" method="post">
+            <button type="submit" th:disabled="${sessionValid == true}">Start-Voting</button>
+        </form>
+    </div>
+
     <p>Env variable <span th:text="${appEnv}"></span></p>
     <form th:action="@{/vote}" method="post">
         <label for="voter">Voter name:</label>
-        <select id="voter" name="voter" required>
+        <select id="voter" name="voter" required th:disabled="${sessionValid == false}">
             <option th:each="name : ${voterNames}" th:value="${name}" th:text="${name}"></option>
         </select>
         <label for="voteFor">Vote:</label>
-        <select id="voteFor" name="voteFor" required>
+        <select id="voteFor" name="voteFor" required th:disabled="${sessionValid == false}">
             <option th:each="voteFor : ${candidates}" th:value="${voteFor}" th:text="${voteFor}"></option>
         </select>
-        <button type="submit">Vote</button>
+        <button type="submit" th:disabled="${sessionValid == false}">Vote</button>
     </form>
     <h2>Voting Count</h2>
     <table border="1">
         <thead>
         <tr>
-            <th>Voter</th>
+            <th>Election Candidate</th>
             <th>Votes</th>
         </tr>
         </thead>

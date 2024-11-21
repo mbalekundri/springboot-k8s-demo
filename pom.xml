@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.k8s</groupId>
 	<artifactId>springboot-k8s-demo</artifactId>
-	<version>1.5</version>
+	<version>1.6</version>
 	<name>springboot-k8s-demo</name>
 	<description>Demo project for Spring Boot GKE Azure AKS</description>
 	<url/>

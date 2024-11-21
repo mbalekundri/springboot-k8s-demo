@@ -17,9 +17,15 @@
     docker push rbalekundri/springboot-k8s-demo:1.4
 
 # B) K8s commands
+# Reference: https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+# Reference: https://kubernetes.io/docs/tutorials/kubernetes-basics/
 1. kubectl version
 2. kubectl apply -f k8s-manifest.yml
 3. kubectl get deployments (takes time)
 4. kubectl get pods  (takes time)
 5. kubectl get svc
+6. kubectl get namespaces
+7. kubectl get namespaces <namespace_name>
+8. kubectl get pods -n <namespace_name>
+9. kubectl delete -f k8s-manifest.yml
 

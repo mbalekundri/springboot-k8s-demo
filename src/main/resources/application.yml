@@ -10,6 +10,25 @@ server:
   error:
     whitelabel:
       enabled: false
-APP_ENV: dev
+APP_ENV: qa
+NO_VOTING_ALLOWED: 1
 # Pass from envt
 #APP_ENV: ${APP_ENV}
+logging:
+  file:
+    name: application.log
+  level:
+    root: ERROR
+    com.springboot.k8s.demo: DEBUG
+voter:
+  names:
+    - Satish
+    - Rohit
+    - Ravi
+    - Bala
+    - Spoorthi
+    - Bhawani
+    - Narendra
+    - Zulbie
+    - Mehdi
+    - Tazaeen
