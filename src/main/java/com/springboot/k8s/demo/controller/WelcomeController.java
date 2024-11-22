@@ -1,6 +1,7 @@
 package com.springboot.k8s.demo.controller;
 
-import com.springboot.k8s.demo.config.ApplicationConfig;
+import com.springboot.k8s.demo.config.CandidateConfigProperties;
+import com.springboot.k8s.demo.config.VoterConfigProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,14 +20,16 @@ import java.util.stream.Collectors;
 
 @Controller
 @Slf4j
-
 public class WelcomeController implements ErrorController {
 
     private static Integer count = 0;
     private static boolean clearData = false;
 
     @Autowired
-    private ApplicationConfig applicationConfig;
+    private VoterConfigProperties voterConfigProperties;
+
+    @Autowired
+    private CandidateConfigProperties candidateConfigProperties;
 
     @Value("${APP_ENV}")
     private String appEnv;
@@ -48,14 +51,13 @@ public class WelcomeController implements ErrorController {
     }
 
     private List<String> getSortedVoterNamesList() {
-        List<String> namesList = new ArrayList<>(applicationConfig.getNames());
+        List<String> namesList = new ArrayList<>(voterConfigProperties.getNames());
         Collections.sort(namesList);
         return namesList;
     }
 
     private List<String> getSortedCandidatesList() {
-        // Assuming candidatesList is derived differently
-        List<String> candidates = new ArrayList<>(applicationConfig.getNames()); // Example logic
+        List<String> candidates = new ArrayList<>(candidateConfigProperties.getNames()); // Example logic
         Collections.sort(candidates);
         return candidates;
     }

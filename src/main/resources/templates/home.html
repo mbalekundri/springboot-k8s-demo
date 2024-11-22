@@ -30,29 +30,31 @@
         </select>
         <button type="submit" th:disabled="${sessionValid == false}">Vote</button>
     </form>
-    <h2>Voting Count</h2>
-    <table border="1">
-        <thead>
-        <tr>
-            <th>Election Candidate</th>
-            <th>Votes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="entry : ${votes}">
-            <td th:text="${entry.key}"></td>
-            <td th:text="${entry.value}"></td>
-        </tr>
-        </tbody>
-    </table>
-    <h2>Remote Call Records</h2>
-    <table border="1">
-        <thead></thead>
-        <tbody>
-        <tr th:each="remoteCall : ${remoteCalls}">
-            <td th:text="${remoteCall}"></td>
-        </tr>
-        </tbody>
-    </table>
+    <div th:if="${not sessionValid}">
+        <h2>Election Voting Count</h2>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Election Candidate</th>
+                <th>Votes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="entry : ${votes}">
+                <td th:text="${entry.key}"></td>
+                <td th:text="${entry.value}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <h2>Voting Back End Records</h2>
+        <table border="1">
+            <thead></thead>
+            <tbody>
+            <tr th:each="remoteCall : ${remoteCalls}">
+                <td th:text="${remoteCall}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

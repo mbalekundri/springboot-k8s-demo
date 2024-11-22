@@ -10,10 +10,10 @@ server:
   error:
     whitelabel:
       enabled: false
-#APP_ENV: qa
+APP_ENV: qa
 NO_VOTING_ALLOWED: 1
 # Pass from envt
-APP_ENV: ${APP_ENV}
+#APP_ENV: ${APP_ENV}
 logging:
   file:
     name: application.log
@@ -23,6 +23,18 @@ logging:
 voter:
   names:
     - Satish
+    - Rohit
+    - Ravi
+    - Bala
+    - Spoorthi
+    - Bhawani
+    - Narendra
+    - Zulbie
+    - Mehdi
+    - Tazaeen
+
+candidate:
+  names:
     - Rohit
     - Ravi
     - Bala

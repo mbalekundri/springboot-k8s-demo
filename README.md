@@ -12,3 +12,9 @@ https://learn.microsoft.com/en-us/training/paths/intro-to-kubernetes-on-azure/
    https://www.youtube.com/watch?v=0knqjEp3coU
    https://github.com/jaiswaladi246/Boardgame
 3. https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+# Flink
+1. Apache Kafka Flink Integration | Installation | Use Case | Java Code from Scratch
+   https://www.youtube.com/watch?v=nIGuFK2qNe8
+   https://github.com/binodsuman/Kafka_Flink_Integration
+2. 
