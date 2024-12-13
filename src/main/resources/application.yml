@@ -10,10 +10,11 @@ server:
   error:
     whitelabel:
       enabled: false
-APP_ENV: qa
+# For local run uncomment below line
+# APP_ENV: qa
 NO_VOTING_ALLOWED: 1
-# Pass from envt
-#APP_ENV: ${APP_ENV}
+# For K8s deployment uncomment below line
+APP_ENV: ${APP_ENV}
 logging:
   file:
     name: application.log
