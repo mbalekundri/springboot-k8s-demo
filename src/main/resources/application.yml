@@ -11,10 +11,10 @@ server:
     whitelabel:
       enabled: false
 # For local run uncomment below line
-# APP_ENV: qa
+APP_ENV: AKS_Production
 NO_VOTING_ALLOWED: 1
 # For K8s deployment uncomment below line
-APP_ENV: ${APP_ENV}
+#APP_ENV: ${APP_ENV}
 logging:
   file:
     name: application.log
