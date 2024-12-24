@@ -55,6 +55,7 @@
     Dynamically scaling container count up or down
     kubectl scale --replicas=1 deployments/nginx
 11. kubectl delete -f k8s-manifest.yml
+12. az aks delete --name myAKSCluster --resource-group myResourceGroup
 
 #  C) Azure Kubernetes cluster create using CLI
 #  Reference: 

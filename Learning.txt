@@ -1,0 +1,27 @@
+1. Dockerizing spring boot application
+https://www.youtube.com/watch?v=wlKzpnuCIFQ&list=PL3rAaHySgv9BAzRiCxvs79Rl1L7xMIHNw
+
+2. Learn Apache Flink In 45 Minutes - Apache Flink Tutorial For Beginners
+https://www.youtube.com/watch?v=nfMANR13ZSA
+https://developer.confluent.io/courses/flink-java/overview/
+
+3. Kubernetes for Beginners 2022- 
+https://www.youtube.com/watch?v=wdvyD0i7ZHI&list=PLWO1vff-jJQ-jMZOZs_BnvHYrtyPfzVyN
+
+4. How to create AKS Cluster and Deploy Springboot Microservices into AKS Cluster using Azure Pipeline (Imp)
+https://www.youtube.com/watch?v=frII9e1XrzE
+How to Create a Kubernetes Cluster in Azure? | Kubernetes tutorial for beginners
+https://www.youtube.com/watch?v=YlR9AkDJMMA
+
+
+5. AKS Monitoring with Azure Managed Prometheus & Grafana | Azure Monitor Workspace Integration | K8S
+https://www.youtube.com/watch?v=q2Mr60u-WFQ
+
+
+6. Azure DevOps CICD Pipeline Project | Real-Time DevOps Project
+https://www.youtube.com/watch?v=0knqjEp3coU&t=32s
+https://github.com/jaiswaladi246/Boardgame6
+
+
+7. Setup AKS Cluster & Deploy Springboot Docker Container to AKS Cluster using Helm and Azure Pipeline
+https://www.youtube.com/watch?v=TSufDgRBfdg
