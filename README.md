@@ -58,3 +58,12 @@
 # Creating a Spring Boot and Angular application for Azure
 1. https://dev.to/azure/creating-a-spring-boot-and-angular-application-for-azure-1-7-2mb8
 
+## Minikube installation
+1) https://www.youtube.com/watch?v=k4DEuO6C_jI
+2) https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+3) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+4) DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+5) minikube start --driver=hyperv
+6) https://docs.docker.com/compose/install/standalone/
+7) 
+
