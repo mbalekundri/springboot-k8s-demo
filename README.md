@@ -78,3 +78,5 @@ https://kubernetes.io/docs/concepts/workloads/controllers/deployment/ (Kubernete
 
 ## Java version selection in Linux
 sudo update-alternatives --config java
+## Java 11 path
+C:\Program Files\Microsoft\jdk-11.0.23.9-hotspot\bin

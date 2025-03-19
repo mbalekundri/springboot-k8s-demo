@@ -38,8 +38,10 @@ public class WelcomeController implements ErrorController {
     private Integer NO_VOTING_ALLOWED;
 
     private static List<String> remoteCalls = new ArrayList<>();
-    private static Map<String, Integer> candidateVotesMap = new HashMap<>();
+
     private static Map<String, Integer> votersMap = new HashMap<>();
+    private static Map<String, Integer> candidateVotesMap = new HashMap<>();
+
     private List<String> voterNamesList;
     private List<String> candidatesList;
     private String errorMessage;
@@ -57,7 +59,7 @@ public class WelcomeController implements ErrorController {
     }
 
     private List<String> getSortedCandidatesList() {
-        List<String> candidates = new ArrayList<>(candidateConfigProperties.getNames()); // Example logic
+        List<String> candidates = new ArrayList<>(candidateConfigProperties.getNames());
         Collections.sort(candidates);
         return candidates;
     }

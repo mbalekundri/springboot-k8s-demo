@@ -1,7 +1,13 @@
 # A) Docker commands
 # Create an account in https://hub.docker.com/ & docker login
-# apt -y update and apt install -y
-2. docker version  (If not working then login to docker hub by docker login)
+# sudo apt -y update and sudo apt install -y
+# sudo service docker start or sudo service docker restart
+# sudo service docker status
+# sudo apt install wsl
+# Check values @ Rohit@1979
+# https://www.youtube.com/watch?v=Cun059gxoIE&t=7s
+
+1. docker version  (If not working then login to docker hub by docker login)
 2. docker build -t rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT .
    docker build -t rbalekundri/springboot-k8s-demo:1.1 .
    docker build -t rbalekundri/springboot-k8s-demo:latest .
@@ -81,3 +87,4 @@ for i in movie-catalogue reviews user-management; do
    docker push $ACR_NAME/$i-service:latest
    done
 11. kubectl apply -f all-microservices.yaml
+12. sudo update-alternatives --config java

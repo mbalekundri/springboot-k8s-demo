@@ -7,20 +7,22 @@ spring:
     mode: HTML
     cache: true
 server:
+  port: 8080
   error:
     whitelabel:
       enabled: false
 # For local run uncomment below line
 APP_ENV: AKS_Production
 NO_VOTING_ALLOWED: 1
+
 # For K8s deployment uncomment below line
 #APP_ENV: ${APP_ENV}
-logging:
-  file:
-    name: application.log
-  level:
-    root: ERROR
-    com.springboot.k8s.demo: DEBUG
+#logging:
+#  file:
+#    name: application.log
+#  level:
+#    root: ERROR
+#    com.springboot.k8s.demo: DEBUG
 voter:
   names:
     - Satish
