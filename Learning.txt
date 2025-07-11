@@ -22,6 +22,15 @@ https://www.youtube.com/watch?v=q2Mr60u-WFQ
 https://www.youtube.com/watch?v=0knqjEp3coU&t=32s
 https://github.com/jaiswaladi246/Boardgame6
 
+You will never forget HELM after watching this.
+https://www.youtube.com/watch?v=uNnLFp-qJaU
+
+
+Designing Kubernetes Implementation from Scratch to Production
+https://www.youtube.com/watch?v=dnO02PKNLzE
 
 7. Setup AKS Cluster & Deploy Springboot Docker Container to AKS Cluster using Helm and Azure Pipeline
 https://www.youtube.com/watch?v=TSufDgRBfdg
+
+8. Deploy Spring Boot App with MySQL on Kubernetes cluster using Helm Chart : Kubernetes tutorial
+    https://www.youtube.com/watch?v=yet0-x8Ab6c

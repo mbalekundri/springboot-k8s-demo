@@ -69,6 +69,15 @@ https://kubernetes.io/docs/concepts/workloads/controllers/deployment/ (Kubernete
 3) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 4) DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 5) minikube start --driver=hyperv
+   minikube start --driver=docker
+# If there is any problems in minikube then 
+# 1) minikube delete
+# 2) minikube start
+# 3) minikube status
+# 4) minikube dashboard
+# 5) minikube get ns
+# 6) minikube nodes
+# 7) minikube stop
 6) https://docs.docker.com/compose/install/standalone/
 7) https://www.youtube.com/watch?v=Si7TkNqFN7o (How to install docker in Windows 10 without Docker Destop?)
 8) https://www.youtube.com/watch?v=rlDG9Ztm7Z0 (How to install Docker on Windows on Ubuntu WSL without Docker Desktop in easy steps | Docker | WSL)

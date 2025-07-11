@@ -1,10 +1,19 @@
 # A) Docker commands
-# Create an account in https://hub.docker.com/ & docker login
 # sudo apt -y update and sudo apt install -y
+# apt install docker.io
+**# sudo usermod -aG docker $USER**
+# new grp docker
+# apt install net-tools
+# apt install tree
+# tree --version
+# apt install vim
+# apt install curl
+# apt install git   / git --version
+# apt install wget
+# Create an account in https://hub.docker.com/ & docker login
 # sudo service docker start or sudo service docker restart
 # sudo service docker status
 # sudo apt install wsl
-# Check values @ Rohit@1979
 # https://www.youtube.com/watch?v=Cun059gxoIE&t=7s
 
 1. docker version  (If not working then login to docker hub by docker login)
@@ -12,6 +21,7 @@
    docker build -t rbalekundri/springboot-k8s-demo:1.1 .
    docker build -t rbalekundri/springboot-k8s-demo:latest .
    docker build -t rbalekundri/springboot-k8s-demo:version-1.0 .
+   docker history springboot-k8s-demo
 
 3. docker run -it -p 8080:8080 rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT
    docker run -d -p 8080:8080 rbalekundri/springboot-k8s-demo:1.0.0-SNAPSHOT
@@ -19,6 +29,8 @@
    # To give a container an explicit name using the --name flag, use the run command
    docker run -d -p 8080:8080 rbalekundri/springboot-k8s-demo:1.1 --name ROHIT_K8s
 4. docker ps -a
+   docker container ls
+   docker network ls
 5. docker logs <container-id>
    docker logs -f <container-id>
 6. docker stop <container-id>
@@ -34,6 +46,11 @@
 # Docker Volumes
 11. docker volume create (Docker creates and manages the new volume by running)
 12. docker stats
+13. docker exec -it <container-id> /bin/bash
+14. docker prune -f (Remove all stopped containers, all dangling images, and all unused networks)
+15. docker network create -d bridge my-bridge-network
+16. docker network ls
+17. 
 
 # B) K8s commands
 # Kubernetes clusters

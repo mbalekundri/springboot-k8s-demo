@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-k8s-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springboot-k8s-demo
+  template:
+    metadata:
+      labels:
+        app: springboot-k8s-demo
+    spec:
+      containers:
+        - name: springboot-k8s-demo-container
+          image: rbalekundri/springboot-k8s-demo:1.6
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot-k8s-service
+spec:
+  selector:
+    app: springboot-k8s-demo
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer

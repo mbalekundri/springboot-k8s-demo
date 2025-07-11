@@ -1,0 +1,20 @@
+Cassandra Docker Commands
+====================
+docker pull cassandra:latest
+docker images
+docker network create cassandra
+docker run --rm -d --name cassandra --hostname cassandra --network cassandra cassandra
+docker ps 
+docker exec -it <container-name> cqlsh
+
+
+CQLSH commands
+===============
+
+cqlsh> CREATE KEYSPACE invoicedata WITH REPLICATION = {'class' : 'SimpleStrategy','replication_factor' : 1};
+cqlsh> use invoicedata;
+cqlsh:invoicedata> drop keyspace mykeyspace;
+cqlsh:invoicedata> create table invoice(id int primary key, name text, number text, amount double);
+cqlsh:invoicedata> drop table invoicedata.mytable;
+cqlsh:invoicedata> select * from invoice;
+
